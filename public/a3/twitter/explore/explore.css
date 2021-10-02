@@ -1,0 +1,43 @@
+
+body{background-color: #282c34}
+#searchbar{ width: 85%;height: 50px; border-radius: 50px;border-color: rgb(47,51,54); }
+.navbar img{float:right;width: 50px; height: 50px; margin:12px}
+
+input::-webkit-input-placeholder{
+color: white;
+    font-size:20px;
+}
+#searchbar{background-color: darkgray}
+
+.wd-grid-row{padding: 16px}
+.wd-forYou {
+    width: 16.66%;
+    float: left;
+
+}
+a {color:rgb(110,118,125); text-decoration: none; font-size: 15px;padding: 16px}
+
+/*.wd-grid-row{padding:16px;}*/
+.wd-forYou a{color: rgb(29,161,242);font-weight:bold; rgb(29,161,242); text-decoration:underline }
+
+.wd-treding{
+    width: 16.66%; float: left;
+
+}
+
+.wd-covid-19{
+    width:16.66%;
+    float: left;
+}
+
+.wd-news{width: 16.66%;float: left;}
+
+.wd-sports{width: 16.66%;float: left;}
+.wd-entertainment{width: 16.66%;float: left;}
+.wd-post{border: 3px solid rgb(47, 51, 54);height: 150px;padding: 16px;}
+.wd-post h2{font-size:13px; color: rgb(110, 118, 125)}
+.wd-content{font-size: larger; color: white}
+.wd-tweet{font-size:13px; color: rgb(110, 118, 125)}
+.wd-time{font-size:13px; color: rgb(110, 118, 125)}
+.wd-poster{font-size:medium; color: white;}
+.wd-post img{border-radius: 20px 20px 20px 20px;; width: 100px;height: 100px;float: right; margin-right:16px;}
