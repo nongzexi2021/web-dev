@@ -36,5 +36,7 @@ a{color: lightgray}
 .rightB{background-color: grey;text-decoration: white;font-weight: bold;border-style: none;}
 #enter{border-bottom: #61dafb solid 10px;  }
 #middleClass{border: grey solid 2px;}
+.time{font-size: small;color: gray;}
+
 
 

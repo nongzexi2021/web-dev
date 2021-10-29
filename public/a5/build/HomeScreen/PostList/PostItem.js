@@ -9,10 +9,13 @@ const postItem = (postList)=>{
                 
                 <div class = "col-6">
                         <div class="row">
+                        <span>
                         <p class = "u-text">
                             ${postList.poster}
-                            ${postList.time}
-                        </p>    
+                            <span class = "time">${postList.time}</span>
+                        </p>
+                        </span>
+
                         </div>
                         <div class="row">
                             <p class = "tittle">${postList.text}</p>
@@ -25,7 +28,7 @@ const postItem = (postList)=>{
                 <ul class="list-group">
                     <list-group-item>
                         
-                        <img class = "pictureContent" src="${postList.picture}">
+                        <img class = "pictureContent img-fluid" src="${postList.picture}">
                     </list-group-item>    
                     <list-group-item>   
                         <div class = "tittle">
@@ -47,19 +50,19 @@ const postItem = (postList)=>{
             <div class="row">
 
                 <div class="col-3">
-                    <i class="fab fa-adn"></i>
+                    <i class="fas fa-comment-dots"></i>
                     ${postList.reply}
                 </div>
                 <div class="col-3">
-                <i class="fab fa-adn"></i>
+                <i class="fas fa-reply"></i>
                     ${postList.forwardTo}
                 </div>    
                 <div class="col-3">
-                <i class="fab fa-adn"></i>
+                <i class="fas fa-heart"></i>
                     ${postList.like}
                 </div>   
                 <div class="col-3">    
-                <i class="fab fa-adn"></i>
+                <i class="fas fa-download"></i>
                     ${postList.download}
                 </div>     
             </div>
