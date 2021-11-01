@@ -33,8 +33,9 @@ const postItem = (postList)=>{
                     <list-group-item>   
                         <div class = "tittle">
                             ${postList.title}
+                            </div>
                     </list-group-item>    
-                        </div>
+                        
                     <list-group-item> 
                         <div>
                             ${postList.content}

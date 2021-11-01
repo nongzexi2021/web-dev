@@ -1,13 +1,14 @@
-const NavigationSidebar = () => {
+const NavigationSidebar = (active) => {
+
     return(`
             <div class="list-group">
-                <a class="list-group-item" href="/">
+                <a class="list-group-item " href="#">
                     <i class="fab fa-twitter"></i></a>
             <!-- continue the rest of the list -->
             
             
 
-                <a href="#" class="list-group-item list-group-item-action">
+                <a href="#" class="list-group-item ${active === 'home' ? 'active' :''}" >
                     <div class="row">
                         <div class="col-2">
                             <div>
@@ -19,7 +20,7 @@ const NavigationSidebar = () => {
                         </div>
                     </div>
                 </a>
-                <a href="#" class="list-group-item list-group-item-action active">
+                <a href="#" class="list-group-item $${active === 'explore' ? 'active' :''}">
                     <div class="row">
                         <div class="col-2">
                             <div>
@@ -32,7 +33,7 @@ const NavigationSidebar = () => {
                     </div>
                 </a>
 
-                <a href="#" class="list-group-item list-group-item-action " aria-current="true">
+                <a href="#" class="list-group-item ${active === 'notifications' ? 'active' :''}">
                     <div class="row">
                         <div class="col-2">
                             <div>
@@ -40,11 +41,11 @@ const NavigationSidebar = () => {
                             </div>
                         </div>
                         <div class="col-10 d-none d-lg-block">
-                            <div>Notification</div>
+                            <div>Notifications</div>
                         </div>
                     </div>
                 </a>
-                <a href="#" class="list-group-item list-group-item-action">
+                <a href="#" class="list-group-item ${active === 'Message' ? 'active' :''}">
                     <div class="row">
                         <div class="col-2">
                             <div>
@@ -56,7 +57,7 @@ const NavigationSidebar = () => {
                         </div>
                     </div>
                 </a>
-                <a href="#" class="list-group-item list-group-item-action">
+                <a href="#" class="list-group-item ${active === 'BookMarks' ? 'active' :''}">
                     <div class="row">
                         <div class="col-2">
                             <div>
@@ -69,7 +70,7 @@ const NavigationSidebar = () => {
                     </div>
                 </a>
 
-                <a href="#" class="list-group-item list-group-item-action">
+                <a href="#" class="list-group-item ${active === 'Lists' ? 'active' :''}">
                     <div class="row">
                         <div class="col-2">
                             <div>
@@ -82,7 +83,7 @@ const NavigationSidebar = () => {
                     </div>
                 </a>
 
-                <a href="#" class="list-group-item list-group-item-action">
+                <a href="#" class="list-group-item ${active === 'Profile' ? 'active' :''}"">
                     <div class="row">
                         <div class="col-2">
                             <div>
@@ -95,7 +96,7 @@ const NavigationSidebar = () => {
                     </div>
                 </a>
 
-                <a href="#" class="list-group-item list-group-item-action">
+                <a href="#" class="list-group-item ${active === 'More' ? 'active' :''}">
                     <div class="row">
                         <div class="col-2">
                             <div>
@@ -107,11 +108,11 @@ const NavigationSidebar = () => {
                         </div>
                     </div>
                 </a>
-                <div class="d-grid mt-2">
+                
                 <a href="tweet.html"
-                   class="btn btn-primary btn-block rounded-pill">
+                   class="btn btn-primary btn-block rounded-pill list-group-item d-grid mt-2 " id = "tweet">
                     Tweet</a>
-            </div>
+            
             </div>
     `);
 }
