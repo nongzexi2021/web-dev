@@ -5,7 +5,7 @@ import './vendors/fontawesome/css/all.min.css';
 import Assignment6 from "./components/a6/Assignment6";
 import A7 from "./components/a7/A7"
 import HelloWorld from "./components/a7/HelloWorld";
-import Practice from "./components/a7/Practice/index";
+import Practice from "./components/a8/Practice/index";
 import Build from "./components/a7/Build/index";
 import {BrowserRouter, Link, Route} from "react-router-dom";
 
@@ -15,6 +15,7 @@ import tweets from "./reducers/tweets";
 import profile from "./reducers/profile"
 import who from "./reducers/who";
 import {Provider} from "react-redux";
+import APIExamples from "./components/a8/Practice/APIExamples";
 
 
 const reducer = combineReducers({tweets: tweets, who, profile})
@@ -32,6 +33,10 @@ function App() {
                 <Link to = "/a7/practice">A7</Link>
             </li>
 
+            <li>
+                <Link to = "/a8"> A8 </Link>
+            </li>
+
             <div className="container">
                 <Route path="/a6/">
                     <Assignment6/>
@@ -41,7 +46,13 @@ function App() {
                     <A7/>
                 </Route>
 
+                <Route path = "/a8">
+                    <Practice/>
+                </Route>
+
             </div>
+
+
         </BrowserRouter>
         </Provider>
     );
