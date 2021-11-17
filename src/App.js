@@ -1,38 +1,52 @@
+
 import './vendors/bootstrap/css/bootstrap.min.css';
 import './vendors/bootstrap/bootstrap.min.css';
 import './vendors/fontawesome/css/all.min.css';
-
-import HelloWorld from "./components/a6/HelloWorld";
-import Practice from "./components/a6/Practice/index";
-import Build from "./components/a6/Build/index";
-import {BrowserRouter, Route} from "react-router-dom";
+import Assignment6 from "./components/a6/Assignment6";
+import A7 from "./components/a7/A7"
+import HelloWorld from "./components/a7/HelloWorld";
+import Practice from "./components/a7/Practice/index";
+import Build from "./components/a7/Build/index";
+import {BrowserRouter, Link, Route} from "react-router-dom";
 
 import './App.css';
-import HomeScreen from "./components/a6/Build/HomeScreen/HomeScreen";
-import ExploreScreen from "./components/a6/Build/ExploreScreen";
+import {combineReducers, createStore} from "redux";
+import tweets from "./reducers/tweets";
+import profile from "./reducers/profile"
+import who from "./reducers/who";
+import {Provider} from "react-redux";
+
+
+const reducer = combineReducers({tweets: tweets, who, profile})
+const store = createStore(reducer);
 
 
 function App() {
     return (
+        <Provider store={store}>
         <BrowserRouter>
+            <li>
+                <Link to = "/a6">A6</Link>
+            </li>
+            <li>
+                <Link to = "/a7/practice">A7</Link>
+            </li>
+
             <div className="container">
-                <Route path="/a6/hello" exact={true}>
-                    <HelloWorld/>
-                </Route>
-                <Route path={["/", "/a6", "/a6/practice"]} exact={true}>
-                    <Practice/>
-                </Route>
-                <Route path="/a6/Build" exact={true}>
-                    <Build/>
+                <Route path="/a6/">
+                    <Assignment6/>
                 </Route>
 
-                <Route path="/a6/twitter/home" component={HomeScreen}/>
-                <Route path="/a6/twitter/explore" component={ExploreScreen}/>
+                <Route path = "/a7">
+                    <A7/>
+                </Route>
 
             </div>
         </BrowserRouter>
+        </Provider>
     );
 }
+
 
 
 export default App;

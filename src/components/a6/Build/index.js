@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
-const Index = () => {
+const Build = () => {
     return(
         <>
             <h1>Build</h1>
@@ -21,5 +21,5 @@ const Index = () => {
     )
 };
 
-export default Index;
+export default Build;
 
