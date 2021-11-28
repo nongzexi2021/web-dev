@@ -15,6 +15,7 @@ const Practice = () => {
 
 
 
+
         </div>
     )
 };

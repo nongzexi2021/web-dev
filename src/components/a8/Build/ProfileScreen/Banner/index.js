@@ -1,13 +1,18 @@
 
 import {Link} from "react-router-dom";
-import {useSelector} from "react-redux";
-
+import React, {useEffect} from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {getCurrentProfile} from "../../../../../services/ProfileService";
 
 const Banner = () => {
     const information = useSelector(state => state.profile)
+    const dispatch = useDispatch();
+    useEffect(() => getCurrentProfile(dispatch), [])
 
-    return(
+
+    return (
         <>
+
             <div className="row">
                 <div className="col-1">
                     <div style={{marginTop:'13px'}}>
@@ -56,7 +61,7 @@ const Banner = () => {
                 </div>
 
                 <div className="col">
-                    <Link to="/a7/twitter/editBanner">
+                    <Link to="/a8/twitter/editBanner">
                         <button className="btn btn-dar rounded-pill border-dark float-end mt-2 text-white float-right">
                             Edit Profile
                         </button>

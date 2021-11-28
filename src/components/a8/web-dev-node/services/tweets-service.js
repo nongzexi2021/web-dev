@@ -44,7 +44,7 @@ module.exports = (app) => {
                     tweet.liked = false;
                     tweet.stats.likes--;
                 } else {
-                    tweet.liked = true;
+                    tweet.liked = true;e
                     tweet.stats.likes++;
                 }
                 return tweet;

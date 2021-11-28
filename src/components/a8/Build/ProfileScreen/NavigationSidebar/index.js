@@ -84,7 +84,7 @@ const NavigationSidebar = ({active}) => {
                     </div>
                 </a>
 
-                <a href="/a7/twitter/profile" className={`list-group-item ${active === 'profile' ? 'active' :''}`}>
+                <a href="/a8/twitter/profile" className={`list-group-item ${active === 'profile' ? 'active' :''}`}>
                     <div className="row">
                         <div className="col-2">
                             <div>

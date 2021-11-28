@@ -1,11 +1,12 @@
 import NavigationSideBar from '../NavigationSidebar/index'
-import information from '../../../../../reducers/data/profile'
+import {updateCurrentProfile} from '../../../../../services/ProfileService'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 
 const EditBanner = () => {
+    const information = useSelector(state => state.profile)
     let [name, setName] = useState({newName: information.name})
     let [info, setInfo] = useState({bio: information.bio})
     let [loca, setLoca] = useState({loca: information.location})
@@ -44,7 +45,13 @@ const EditBanner = () => {
     }
 
     const saveClickHandler = () => {
-        dispatch({type: 'save', info, loca, personalURL, name, birth})
+        updateCurrentProfile(dispatch, {
+            bio : info.bio,
+            location: loca.loca,
+            website: personalURL.web,
+            name: name.newName,
+            dateOfBirth: birth.birthday
+        });
     }
     return (
 
@@ -69,7 +76,7 @@ const EditBanner = () => {
 
                         </div>
                         <div className="col-1">
-                            <Link to="/a7/twitter/profile">
+                            <Link to="/a8/twitter/profile">
                                 <button className="btn btn-light rounded-pill bg-white me-2 float-end"
                                         onClick={saveClickHandler}>
                                     <span className="fw-bold text-black">Save</span>

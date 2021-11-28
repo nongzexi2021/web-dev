@@ -16,6 +16,7 @@ import profile from "./reducers/profile"
 import who from "./reducers/who";
 import {Provider} from "react-redux";
 import APIExamples from "./components/a8/Practice/APIExamples";
+import A8 from "./components/a8/A8";
 
 
 const reducer = combineReducers({tweets: tweets, who, profile})
@@ -47,7 +48,7 @@ function App() {
                 </Route>
 
                 <Route path = "/a8">
-                    <Practice/>
+                    <A8/>
                 </Route>
 
             </div>

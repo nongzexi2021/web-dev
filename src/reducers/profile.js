@@ -2,6 +2,16 @@ import information from "./data/profile"
 
 const profile = (state = information, action) => {
     switch (action.type){
+        case 'fetch-all-profile':
+
+
+            return(
+                action.information
+
+            )
+
+
+
         case  'save':
             const newState = {
                 name: action.name.newName,
@@ -19,6 +29,11 @@ const profile = (state = information, action) => {
             }
 
             return newState;
+
+        case  'save1':
+
+            return action.information;
+
 
 
         default:
