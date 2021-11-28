@@ -1,14 +1,16 @@
 import React, {useEffect, useState} from "react";
+
+const movieApi = "https://node-on-heroku-zexi.herokuapp.com/api/movies"
 const MovieApiClient = () => {
     const [movies, setMovies] = useState([]);
     useEffect(() =>
-            fetch('http://localhost:4000/api/movies')
+            fetch(movieApi)
                 .then(response => response.json())
                 .then(movies => setMovies(movies))
         , []);
 
     const deleteMovie = (movie) =>
-        fetch(`http://localhost:4000/api/movies/${movie._id}`, {
+        fetch(`${movieApi}/${movie._id}`, {
             method: 'DELETE'
         })
             .then(response => response.json())
@@ -20,7 +22,7 @@ const MovieApiClient = () => {
         setMovie({...movie, title: event.target.value});
 
     const createMovieClickHandler = () =>
-        fetch('http://localhost:4000/api/movies', {
+        fetch(movieApi, {
             method: 'POST',
             body: JSON.stringify(movie),
             headers: {
@@ -32,7 +34,7 @@ const MovieApiClient = () => {
 
 
     const saveMovie = () =>
-        fetch(`http://localhost:4000/api/movies/${movie._id}`, {
+        fetch(`${movieApi}/${movie._id}`, {
             method: 'PUT',
             body: JSON.stringify(movie),
             headers: {
