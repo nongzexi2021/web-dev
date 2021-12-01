@@ -83,7 +83,7 @@ const NavigationSidebar = ({active}) => {
                     </div>
                 </a>
 
-                <Link to="/a8/twitter/profile" className={`list-group-item ${active === 'profile' ? 'active' :''}`}>
+                <Link to = "/a8/twitter/profile" className={`list-group-item ${active === 'profile' ? 'active' :''}`}>
                     <div className="row">
                         <div className="col-2">
                             <div>
