@@ -19,8 +19,8 @@ const Build = () => {
         <Provider store={store}>
             <div>
 
-                <Route path="/a8/twitter/home" component={HomeScreen}/>
-                <Route path="/a8/twitter/profile" component={ProfileScreen}/>
+
+
 
 
 
