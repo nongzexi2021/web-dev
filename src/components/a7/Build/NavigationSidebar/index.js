@@ -94,7 +94,7 @@ const NavigationSidebar = ({active}) => {
                             <div>Profile</div>
                         </div>
                     </div>
-                </a>
+                </Link>
 
                 <a href="more.html" className={`list-group-item ${active === 'more' ? 'active' :''}`}>
                     <div className="row">
