@@ -4,19 +4,15 @@ import './vendors/bootstrap/bootstrap.min.css';
 import './vendors/fontawesome/css/all.min.css';
 import Assignment6 from "./components/a6/Assignment6";
 import A7 from "./components/a7/A7"
-import HelloWorld from "./components/a7/HelloWorld";
-import Practice from "./components/a8/Practice/index";
-import Build from "./components/a7/Build/index";
 import {BrowserRouter, Link, Route} from "react-router-dom";
-
 import './App.css';
 import {combineReducers, createStore} from "redux";
 import tweets from "./reducers/tweets";
 import profile from "./reducers/profile"
 import who from "./reducers/who";
 import {Provider} from "react-redux";
-import APIExamples from "./components/a8/Practice/APIExamples";
 import A8 from "./components/a8/A8";
+// import A9 from "./a9";
 
 
 const reducer = combineReducers({tweets: tweets, who, profile})
@@ -38,6 +34,12 @@ function App() {
                 <Link to = "/a8"> A8 </Link>
             </li>
 
+            <li>
+
+                {/*<Link to="/a9/practice">A9</Link>*/}
+
+            </li>
+
             <div className="container">
                 <Route path="/a6/">
                     <Assignment6/>
@@ -50,6 +52,9 @@ function App() {
                 <Route path = "/a8">
                     <A8/>
                 </Route>
+                {/*<Route>*/}
+                {/*    <A9/>*/}
+                {/*</Route>*/}
 
             </div>
 
