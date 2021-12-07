@@ -83,7 +83,7 @@ const NavigationSidebar = ({active}) => {
                     </div>
                 </a>
 
-                <a href="/a9/twitter/profile" className={`list-group-item ${active === 'profile' ? 'active' :''}`}>
+                <Link to="/a9/twitter/profile" className={`list-group-item ${active === 'profile' ? 'active' :''}`}>
                     <div className="row">
                         <div className="col-2">
                             <div>
@@ -94,7 +94,7 @@ const NavigationSidebar = ({active}) => {
                             <div>Profile</div>
                         </div>
                     </div>
-                </a>
+                </Link>
 
                 <a href="more.html" className={`list-group-item ${active === 'more' ? 'active' :''}`}>
                     <div className="row">
