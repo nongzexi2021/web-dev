@@ -1,6 +1,6 @@
 import React from "react";
 import {useDispatch} from "react-redux";
-import {likeTweet} from "../../../../services/tweetService";
+import {likeTweet} from "./service";
 
 const TweetStats = ({tweet}) => {
     const dispatch = useDispatch();

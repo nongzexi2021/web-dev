@@ -1,5 +1,5 @@
-const TWEET_API = 'https://node-on-heroku-zexi.herokuapp.com/api/tweets';
-// const TWEET_API = 'http://localhost:4000/api/tweets';
+// const TWEET_API = 'https://node-on-heroku-zexi.herokuapp.com/api/tweets';
+const TWEET_API = 'http://localhost:4000/rest/tweets';
 
 export const fetchAllTweets = (dispatch) =>
     fetch(TWEET_API)

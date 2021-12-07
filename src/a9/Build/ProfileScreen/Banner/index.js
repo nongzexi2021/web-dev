@@ -2,12 +2,15 @@
 import {Link} from "react-router-dom";
 import React, {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {getCurrentProfile} from "../../../../../services/ProfileService";
+import {fetchCurrentProfile} from "./service";
 
 const Banner = () => {
     const information = useSelector(state => state.profile)
+    const x = information.information;
+    console.log("Banner information: ",information, typeof (information));
+    console.log('x:', x, typeof (x));
     const dispatch = useDispatch();
-    useEffect(() => getCurrentProfile(dispatch), [])
+    useEffect(() => fetchCurrentProfile(dispatch), [])
 
 
     return (
@@ -61,7 +64,7 @@ const Banner = () => {
                 </div>
 
                 <div className="col">
-                    <Link to="/a8/twitter/editBanner">
+                    <Link to="/a9/twitter/editBanner">
                         <button className="btn btn-dar rounded-pill border-dark float-end mt-2 text-white float-right">
                             Edit Profile
                         </button>

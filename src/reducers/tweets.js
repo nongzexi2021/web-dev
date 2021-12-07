@@ -6,7 +6,9 @@ const initialState = {
 
 const tweets = (state = initialState, action) => {
     switch (action.type) {
+
         case 'fetch-all-tweets':
+            console.log("看看reducer" + action.tweets)
             return({
                 tweets: action.tweets
             })
@@ -30,8 +32,12 @@ const tweets = (state = initialState, action) => {
                 })
             });
             break;
+
         case 'delete-tweet':
-            return ({
+
+            console.log("delete tweets!!!!!!")
+            return (
+                {
                 tweets: state.tweets.filter(tweet => tweet._id !== action.tweet._id)
             })
             break;

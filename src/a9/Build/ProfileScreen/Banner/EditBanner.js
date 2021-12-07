@@ -1,8 +1,9 @@
 import NavigationSideBar from '../NavigationSidebar/index'
-import {updateCurrentProfile} from '../../../../../services/ProfileService'
+import {updateCurrentProfile} from './service'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+
 
 
 const EditBanner = () => {
@@ -45,7 +46,9 @@ const EditBanner = () => {
     }
 
     const saveClickHandler = () => {
+        console.log("打赢:"+information);
         updateCurrentProfile(dispatch, {
+            _id:information._id,
             bio : info.bio,
             location: loca.loca,
             website: personalURL.web,
@@ -64,7 +67,7 @@ const EditBanner = () => {
                     <div className="row">
                         <div className="col-1 d-flex align-items-center justify-content-center">
 
-                            <Link to="/a7/twitter/profile">
+                            <Link to="/a9/twitter/profile">
                                 <i className="fas fa-times"></i>
                             </Link>
 
@@ -76,7 +79,7 @@ const EditBanner = () => {
 
                         </div>
                         <div className="col-1">
-                            <Link to="/a8/twitter/profile">
+                            <Link to="/a9/twitter/profile">
                                 <button className="btn btn-light rounded-pill bg-white me-2 float-end"
                                         onClick={saveClickHandler}>
                                     <span className="fw-bold text-black">Save</span>

@@ -12,7 +12,8 @@ import profile from "./reducers/profile"
 import who from "./reducers/who";
 import {Provider} from "react-redux";
 import A8 from "./components/a8/A8";
-// import A9 from "./a9";
+import A9 from "./a9";
+
 
 
 const reducer = combineReducers({tweets: tweets, who, profile})
@@ -36,7 +37,7 @@ function App() {
 
             <li>
 
-                {/*<Link to="/a9/practice">A9</Link>*/}
+                <Link to="/a9">A9</Link>
 
             </li>
 
@@ -52,9 +53,9 @@ function App() {
                 <Route path = "/a8">
                     <A8/>
                 </Route>
-                {/*<Route>*/}
-                {/*    <A9/>*/}
-                {/*</Route>*/}
+                <Route path = "/a9">
+                    <A9/>
+                </Route>
 
             </div>
 
